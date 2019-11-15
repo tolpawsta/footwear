@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DemoShoes.Model.Boots" Collapsed="true">
+    <Position X="6.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Entity\Boots.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DemoShoes.Model.Sandals" Collapsed="true">
+    <Position X="10" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAgAAAA=</HashCode>
+      <FileName>Model\Entity\Sandals.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DemoShoes.Model.Shoes" Collapsed="true">
+    <Position X="11.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Entity\Shoes.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DemoShoes.Model.Slippers" Collapsed="true">
+    <Position X="13.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Model\Entity\Slippers.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DemoShoes.Model.Sneakers" Collapsed="true">
+    <Position X="8.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAABAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Model\Entity\Sneakers.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DemoShoes.SomeShoes" Collapsed="true">
+    <Position X="9.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAgAAAAAAggAAAAAAAAAAAAAgAAABAAAA=</HashCode>
+      <FileName>Model\Entity\SomeShoes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="DemoShoes.Model.IBarefootable" Collapsed="true">
+    <Position X="6.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Model\Interface\IBarefootable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DemoShoes.Model.IClaspable" Collapsed="true">
+    <Position X="8.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Model\Interface\IClaspable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DemoShoes.Model.IFootSoleable" Collapsed="true">
+    <Position X="10" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Model\Interface\IFootSoleable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DemoShoes.Model.IHeelable" Collapsed="true">
+    <Position X="11.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Interface\IHeelable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DemoShoes.Model.IHeightable" Collapsed="true">
+    <Position X="6.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Interface\IHeightable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DemoShoes.Model.ILaceable" Collapsed="true">
+    <Position X="8.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Interface\ILaceable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DemoShoes.Model.ISportable" Collapsed="true">
+    <Position X="10" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Interface\ISportable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="DemoShoes.GenderType" Collapsed="true">
+    <Position X="6.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAgAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Model\GenderType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DemoShoes.SeasonType" Collapsed="true">
+    <Position X="10.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAEAgAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Model\SeasonType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DemoShoes.MatertialType" Collapsed="true">
+    <Position X="8.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAQACAA=</HashCode>
+      <FileName>Model\MatertialType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
