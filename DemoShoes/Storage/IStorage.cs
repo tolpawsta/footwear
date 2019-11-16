@@ -6,6 +6,12 @@ namespace DemoShoes
     {
         List<Footwear> GetAllShoes();
         Footwear GetFootwearBy(int vendorCode);
+        List<Footwear> GetFootwearsBy(GenderType gender);
+        List<Footwear> GetFootwearsFamilyKit(SeasonType seasonType);
+        List<Footwear> GetFootwearsWithHeel();
+
+
+
 
     }
 }

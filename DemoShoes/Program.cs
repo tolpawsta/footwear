@@ -10,6 +10,7 @@ namespace DemoShoes
     {
         static void Main(string[] args)
         {
+            IFactoryable factory=new FootwearFactory
         }
     }
 }

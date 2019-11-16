@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace DemoShoes
 {
-    class BootsFactory : IFactoryable
+    class FootwearFactory : IFactoryable
     {
 
         public Footwear CreateFootwear(int vendorCode)
