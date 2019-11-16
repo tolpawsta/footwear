@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DemoShoes.View
 {
@@ -14,20 +11,25 @@ namespace DemoShoes.View
             {
                 Console.WriteLine(footwear.ToString());
             }
-            catch (Exception)
+            catch (NullReferenceException ex)
             {
 
-                throw;
+                Console.WriteLine(ex.Message);
             }
         }
 
         public void Show(List<Footwear> footwears)
         {
-            if (footwears==null)
+            if (footwears == null)
             {
                 throw new NullReferenceException("Sorry footwears not found");
             }
             footwears.ForEach(f => Console.WriteLine(f.ToString()));
+        }
+
+        public void Show(string message)
+        {
+            Console.WriteLine(message);
         }
     }
 }

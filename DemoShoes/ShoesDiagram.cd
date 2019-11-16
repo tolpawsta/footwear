@@ -3,7 +3,7 @@
   <Class Name="DemoShoes.Model.Boots" Collapsed="true">
     <Position X="6.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAQAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAQAABAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Entity\Boots.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -40,12 +40,41 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="DemoShoes.SomeShoes" Collapsed="true">
-    <Position X="9.75" Y="0.75" Width="1.5" />
+  <Class Name="DemoShoes.Footwear" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAAAgAAAAAAggAAAAAAAAAAAAAgAAABAAAA=</HashCode>
-      <FileName>Model\Entity\SomeShoes.cs</FileName>
+      <HashCode>AEAAAAAAAQAAgACEAAAAABQAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Entity\Footwear.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="DemoShoes.View.ConsoleView" Collapsed="true">
+    <Position X="1.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\ConsoleView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DemoShoes.ShoesStorage">
+    <Position X="3.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIBAAAEAAAAAAAAAAAAAAAAAAAAAAAAAADAAAA=</HashCode>
+      <FileName>Storage\ShoesStorage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DemoShoes.BootsFactory" Collapsed="true">
+    <Position X="1.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\BootsFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Collections.Generic.List&lt;T&gt;" Collapsed="true">
+    <Position X="7.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
   </Class>
   <Interface Name="DemoShoes.Model.IBarefootable" Collapsed="true">
     <Position X="6.5" Y="3.25" Width="1.5" />
@@ -96,10 +125,31 @@
       <FileName>Model\Interface\ISportable.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Interface Name="DemoShoes.View.IViewable" Collapsed="true">
+    <Position X="1.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\IViewable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DemoShoes.IStorage" Collapsed="true">
+    <Position X="3.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Storage\IStorage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DemoShoes.IFactoryable" Collapsed="true">
+    <Position X="1.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\IFactoryable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Enum Name="DemoShoes.GenderType" Collapsed="true">
     <Position X="6.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAgAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAABAAAIAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
       <FileName>Model\GenderType.cs</FileName>
     </TypeIdentifier>
   </Enum>
