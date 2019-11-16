@@ -2,7 +2,7 @@
 {
     abstract class Footwear
     {
-        public int Vendor { get; set; }
+        public int VendorCode { get; set; }
         public string Name { get; set; }
         public int Size { get; set; } = 0;
         public decimal Cost { get; set; } = 0;
@@ -11,7 +11,7 @@
         public SeasonType Season { get; set; }
         public virtual string ToString()
         {
-            return "articul " + Vendor
+            return "articul " + VendorCode
                 + "name " + Name
                 + "gender " + Gender
                 + "season " + Season

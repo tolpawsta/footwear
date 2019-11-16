@@ -24,10 +24,10 @@ namespace DemoShoes
             return footwears;
         }
 
-        public Footwear GetShoesByVendor(int vendor)
+        public Footwear GetShoesByVendorCode(int vendor)
         {
 
-          return footwears.SingleOrDefault(x => x.Vendor == vendor);
+          return footwears.SingleOrDefault(x => x.VendorCode == vendor);
             
             
         }

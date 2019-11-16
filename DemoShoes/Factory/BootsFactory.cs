@@ -7,14 +7,14 @@ namespace DemoShoes
     class BootsFactory : IFactoryable
     {
 
-        public Footwear CreateFootwear(int vendor)
+        public Footwear CreateFootwear(int vendorCode)
         {
-            switch (vendor)
+            switch (vendorCode)
             {
                 case 101:
                     return new Boots()
                     {
-                        Vendor = vendor,
+                        VendorCode = vendorCode,
                         Name = "Сапоги",
                         Gender = GenderType.Man,
                         Height = 30,
@@ -25,7 +25,7 @@ namespace DemoShoes
                 case 102:
                     return new Boots()
                     {
-                        Vendor = vendor,
+                        VendorCode = vendorCode,
                         Name = "Сапоги",
                         Gender = GenderType.Woman,
                         Height = 50,
@@ -39,7 +39,7 @@ namespace DemoShoes
                 case 103:
                     return new Boots()
                     {
-                        Vendor = vendor,
+                        VendorCode = vendorCode,
                         Name = "Ботинки",
                         Gender = GenderType.Child,
                         Height = 40,
@@ -52,7 +52,7 @@ namespace DemoShoes
                 case 104:
                     return new Shoes()
                     {
-                        Vendor = vendor,
+                        VendorCode = vendorCode,
                         Name = "Туфли",
                         Gender = GenderType.Woman,
                         IsHeel = true,
@@ -64,7 +64,7 @@ namespace DemoShoes
                 case 105:
                     return new Sandals()
                     {
-                        Vendor = vendor,
+                        VendorCode = vendorCode,
                         Name = "Босоножки",
                         Gender = GenderType.Woman,
                         IsClasp = true,
@@ -77,7 +77,7 @@ namespace DemoShoes
                 case 106:
                     return new Slippers()
                     {
-                        Vendor = vendor,
+                        VendorCode = vendorCode,
                         Name = "Тапочки",
                         Gender = GenderType.Man,
                         IsFootSole = true,
@@ -89,7 +89,7 @@ namespace DemoShoes
                 case 107:
                     return new Sneakers()
                     {
-                        Vendor = vendor,
+                        VendorCode = vendorCode,
                         Name = "Кроссовки",
                         Gender = GenderType.Child,
                         Material = MatertialType.Leather,
@@ -98,7 +98,7 @@ namespace DemoShoes
                         Cost = 52.4m
                     };
 
-                default: throw new InvalidOperationException($"Can't great shoer with vendor {vendor}");
+                default: throw new InvalidOperationException($"Can't great shoer with vendor {vendorCode}");
             }
            
             
@@ -107,9 +107,9 @@ namespace DemoShoes
         public List<Footwear> CreateFootwearKit()
         {
             List<Footwear> footwears = new List<Footwear>();
-            for (int vendor = 101; vendor <= 109; vendor++)
+            for (int vendorCode = 101; vendorCode <= 109; vendorCode++)
             {
-                footwears.Add(CreateFootwear(vendor));
+                footwears.Add(CreateFootwear(vendorCode));
             }
             return footwears;
         }
