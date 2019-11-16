@@ -9,8 +9,8 @@ namespace DemoShoes
     class ShoesStorage : IStorage
     {
         List<Footwear> footwears;
-        IFabricable fabric;
-        public ShoesStorage(IFabricable fabric)
+        IFactoryable fabric;
+        public ShoesStorage(IFactoryable fabric)
         {
             footwears = new List<Footwear>();
             this.fabric = fabric;
@@ -29,16 +29,10 @@ namespace DemoShoes
 
         public Footwear GetShoesByVendor(int vendor)
         {
-            try
-            {
-                footwears.Select(x => x.Vendor == vendor);
-            }
-            catch (Exception)
-            {
 
-                throw;
-            }
-            throw new NotImplementedException();
+          return footwears.SingleOrDefault(x => x.Vendor == vendor);
+            
+            
         }
     }
 }

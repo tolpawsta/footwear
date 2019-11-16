@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Fabric\IFabricable.cs" />
-    <Compile Include="Fabric\BootsFabric.cs" />
+    <Compile Include="Factory\IFactoryable.cs" />
+    <Compile Include="Factory\BootsFactory.cs" />
     <Compile Include="Model\Entity\Boots.cs" />
     <Compile Include="Model\Interface\IFootSoleable.cs" />
     <Compile Include="Model\GenderType.cs" />
@@ -65,6 +65,8 @@
     <Compile Include="Model\SeasonType.cs" />
     <Compile Include="Model\Entity\Footwear.cs" />
     <Compile Include="Storage\ShoesStorage.cs" />
+    <Compile Include="View\ConsoleView.cs" />
+    <Compile Include="View\IViewable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
