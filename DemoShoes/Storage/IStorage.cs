@@ -5,7 +5,7 @@ namespace DemoShoes
     interface IStorage
     {
         List<Footwear> GetAllShoes();
-        Footwear GetShoesByVendorCode(int vendorCode);
+        Footwear GetFootwearBy(int vendorCode);
 
     }
 }

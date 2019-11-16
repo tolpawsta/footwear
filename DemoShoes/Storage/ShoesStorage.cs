@@ -24,7 +24,7 @@ namespace DemoShoes
             return footwears;
         }
 
-        public Footwear GetShoesByVendorCode(int vendor)
+        public Footwear GetFootwearBy(int vendor)
         {
 
           return footwears.SingleOrDefault(x => x.VendorCode == vendor);
