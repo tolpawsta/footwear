@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Factory\IFactoryable.cs" />
-    <Compile Include="Factory\BootsFactory.cs" />
+    <Compile Include="Factory\FootwearFactory.cs" />
     <Compile Include="Model\Entity\Boots.cs" />
     <Compile Include="Model\Interface\IFootSoleable.cs" />
     <Compile Include="Model\GenderType.cs" />
@@ -64,7 +64,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\SeasonType.cs" />
     <Compile Include="Model\Entity\Footwear.cs" />
-    <Compile Include="Storage\ShoesStorage.cs" />
+    <Compile Include="Storage\FootwearStorage.cs" />
     <Compile Include="View\ConsoleView.cs" />
     <Compile Include="View\IViewable.cs" />
   </ItemGroup>

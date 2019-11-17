@@ -20,7 +20,9 @@ namespace DemoShoes
                         Height = 30,
                         IsHeel = true,
                         Material = MatertialType.Leather,
-                        Season = SeasonType.Winter, Size=46, Cost=90.5m
+                        Season = SeasonType.Winter,
+                        Size = 46,
+                        Cost = 90.5m
                     };
                 case 102:
                     return new Boots()
@@ -100,8 +102,8 @@ namespace DemoShoes
 
                 default: throw new InvalidOperationException($"Can't great shoer with vendor {vendorCode}");
             }
-           
-            
+
+
         }
 
         public List<Footwear> CreateFootwearKit()

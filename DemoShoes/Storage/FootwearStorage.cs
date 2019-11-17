@@ -29,14 +29,14 @@ namespace DemoShoes
         public Footwear GetFootwearBy(int vendor)
         {
 
-          return footwears.SingleOrDefault(x => x.VendorCode == vendor);
-            
-            
+            return footwears.SingleOrDefault(x => x.VendorCode == vendor);
+
+
         }
 
         public List<Footwear> GetFootwearsBy(GenderType gender)
         {
-            return footwears.FindAll(f=>f.Gender==gender).ToList();
+            return footwears.FindAll(f => f.Gender == gender).ToList();
         }
 
         public List<Footwear> GetFootwearsFamilyKit(SeasonType seasonType)
