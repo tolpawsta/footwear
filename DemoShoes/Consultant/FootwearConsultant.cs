@@ -14,7 +14,7 @@ namespace DemoShoes.Consultant
         IViewable view;
         IStorage storage;
 
-        public FootwearConsultant(string name, IViewable view, IStorage storage)
+        public FootwearConsultant( IViewable view, IStorage storage, string name = "John Smith")
         {
             Name = name;
             this.view = view;
@@ -58,7 +58,7 @@ namespace DemoShoes.Consultant
 
         }
 
-        public void Stop()
+        public void FinishWork()
         {
             view.Show("До свидания!");
         }
