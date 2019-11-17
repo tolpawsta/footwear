@@ -2,8 +2,8 @@
 {
     enum GenderType
     {
+        Child,
         Man,
-        Woman,
-        Child
+        Woman
     }
 }

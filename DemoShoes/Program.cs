@@ -1,4 +1,6 @@
-﻿using DemoShoes.View;
+﻿using DemoShoes.Factory;
+using DemoShoes.Storage;
+using DemoShoes.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;

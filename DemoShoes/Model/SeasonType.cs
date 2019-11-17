@@ -2,9 +2,9 @@
 {
     enum SeasonType
     {
+        Autumn,
         Spring,
         Summer,
-        Autumn,
         Winter
         
     }

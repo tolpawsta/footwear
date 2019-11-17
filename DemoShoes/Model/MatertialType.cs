@@ -3,10 +3,10 @@
     enum MatertialType
     {
         Leather,
-        //Замша
-        Shammy,
         //Резина
         Rubber,
+        //Замша
+        Shammy,
         Textile
     }
 }
