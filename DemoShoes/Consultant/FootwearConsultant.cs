@@ -3,9 +3,7 @@ using DemoShoes.Storage;
 using DemoShoes.View;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace DemoShoes.Consultant
 {
@@ -14,7 +12,7 @@ namespace DemoShoes.Consultant
         IViewable view;
         IStorage storage;
 
-        public FootwearConsultant( IViewable view, IStorage storage, string name = "John Smith")
+        public FootwearConsultant(IViewable view, IStorage storage, string name = "John Smith")
         {
             Name = name;
             this.view = view;
@@ -44,7 +42,7 @@ namespace DemoShoes.Consultant
                     case 0: proceed = false; break;
                     case 1: ShowFootwear(storage.GetAllShoes()); break;
                     case 2: view.Show(FindFootwearByVendorCode()); break;
-                    case 3: view.Show(ChooseFootwearByGender());break;
+                    case 3: view.Show(ChooseFootwearByGender()); break;
                     case 4: view.Show(ChooseFamilyKitForSeason()); break;
                     case 5:
                     case 6:
@@ -61,6 +59,7 @@ namespace DemoShoes.Consultant
         public void FinishWork()
         {
             view.Show("До свидания!");
+            Thread.Sleep(2000);
         }
 
         public void ShowFootwear(List<Footwear> footwears)
@@ -122,7 +121,7 @@ namespace DemoShoes.Consultant
                     case 2: return storage.GetFootwearsFamilyKit(SeasonType.Summer);
                     case 3: return storage.GetFootwearsFamilyKit(SeasonType.Autumn);
                     case 4: return storage.GetFootwearsFamilyKit(SeasonType.Winter);
-                    
+
                     default: view.Show("Не известный сезон."); break;
                 }
             }

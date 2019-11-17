@@ -2,11 +2,6 @@
 using DemoShoes.Factory;
 using DemoShoes.Storage;
 using DemoShoes.View;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DemoShoes
 {
@@ -20,8 +15,6 @@ namespace DemoShoes
             IConsultantable consultant = new FootwearConsultant(view, storage);
             consultant.Work();
             consultant.FinishWork();
-            Console.ReadLine();
-
         }
     }
 }
