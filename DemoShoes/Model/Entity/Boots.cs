@@ -1,4 +1,6 @@
-﻿namespace DemoShoes.Model
+﻿using DemoShoes.Model.Interface;
+
+namespace DemoShoes.Model.Entity
 {
     class Boots : Footwear, IHeelable, IHeightable
     {
@@ -7,8 +9,8 @@
         public override string ToString()
         {
             return base.ToString() +
-                " height " + Height+
-                "heel "+IsHeel;
+                " height " + Height +
+                "heel " + IsHeel;
         }
 
     }

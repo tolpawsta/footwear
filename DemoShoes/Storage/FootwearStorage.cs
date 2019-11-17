@@ -1,9 +1,11 @@
-﻿using DemoShoes.Model;
+﻿using DemoShoes.Factory;
+using DemoShoes.Model.Entity;
+using DemoShoes.Model.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DemoShoes
+namespace DemoShoes.Storage
 {
     class FootwearStorage : IStorage
     {

@@ -1,8 +1,8 @@
-﻿using DemoShoes.Model;
+﻿using DemoShoes.Model.Entity;
 using System;
 using System.Collections.Generic;
 
-namespace DemoShoes
+namespace DemoShoes.Factory
 {
     class FootwearFactory : IFactoryable
     {

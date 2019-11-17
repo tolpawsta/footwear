@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using DemoShoes.Model.Entity;
+using System.Collections.Generic;
 
-namespace DemoShoes
+namespace DemoShoes.Factory
 {
     interface IFactoryable
     {

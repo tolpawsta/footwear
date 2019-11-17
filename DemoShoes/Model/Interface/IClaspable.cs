@@ -1,4 +1,4 @@
-﻿namespace DemoShoes.Model
+﻿namespace DemoShoes.Model.Interface
 {
     //Наличие застежки
     interface IClaspable
