@@ -53,7 +53,7 @@ namespace DemoShoes.Storage.Impl
                 }
 
             }
-            return tempList;
+            return tempList.Count>0?tempList:null;
             // return ((IEnumerable<GenderType>)Enum.GetValues(typeof(GenderType))).Join(footwears)
         }
 
