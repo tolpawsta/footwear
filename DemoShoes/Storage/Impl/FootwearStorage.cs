@@ -1,11 +1,11 @@
 ﻿using DemoShoes.Factory;
+using DemoShoes.Model;
 using DemoShoes.Model.Entity;
-using DemoShoes.Model.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DemoShoes.Storage
+namespace DemoShoes.Storage.Impl
 {
     class FootwearStorage : IStorage
     {
@@ -54,6 +54,16 @@ namespace DemoShoes.Storage
         public List<Footwear> GetFootwearsWithHeel()
         {
             return footwears.FindAll(f => f is IHeelable && ((IHeelable)f).IsHeel == true);
+        }
+
+        public List<Footwear> GetFootwearsBySize(double minSize, double maxSize)
+        {
+           return footwears.FindAll(f => f.Size >= minSize && f.Size <= maxSize);
+        }
+
+        public List<Footwear> GetFootwearsByCost(decimal minCost, decimal maxCost)
+        {
+            return footwears.FindAll(f => f.Size >= minCost && f.Size <= maxCost);
         }
     }
 }

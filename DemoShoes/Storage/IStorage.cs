@@ -1,4 +1,5 @@
-﻿using DemoShoes.Model.Entity;
+﻿using DemoShoes.Model;
+using DemoShoes.Model.Entity;
 using System.Collections.Generic;
 
 namespace DemoShoes.Storage
@@ -10,9 +11,7 @@ namespace DemoShoes.Storage
         List<Footwear> GetFootwearsBy(GenderType gender);
         List<Footwear> GetFootwearsFamilyKit(SeasonType seasonType);
         List<Footwear> GetFootwearsWithHeel();
-
-
-
-
+        List<Footwear> GetFootwearsBySize(double minSize, double maxSize);
+        List<Footwear> GetFootwearsByCost(decimal minCost, decimal maxCost);
     }
 }

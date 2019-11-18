@@ -1,8 +1,11 @@
 ﻿using DemoShoes.Consultant;
 using DemoShoes.Consultant.Impl;
 using DemoShoes.Factory;
+using DemoShoes.Factory.Impl;
 using DemoShoes.Storage;
+using DemoShoes.Storage.Impl;
 using DemoShoes.View;
+using DemoShoes.View.Impl;
 
 namespace DemoShoes
 {

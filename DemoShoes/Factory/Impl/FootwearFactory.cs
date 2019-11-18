@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace DemoShoes.Factory
+namespace DemoShoes.Factory.Impl
 {
     class FootwearFactory : IFactoryable
     {

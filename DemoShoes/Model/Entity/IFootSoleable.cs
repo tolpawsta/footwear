@@ -1,4 +1,4 @@
-﻿namespace DemoShoes.Model.Interface
+﻿namespace DemoShoes.Model.Entity
 {
     //Плоская подошва
     interface IFootSoleable

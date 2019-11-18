@@ -1,4 +1,5 @@
-﻿using DemoShoes.Model.Entity;
+﻿using DemoShoes.Model;
+using DemoShoes.Model.Entity;
 using DemoShoes.Storage;
 using DemoShoes.View;
 using System;
@@ -44,10 +45,11 @@ namespace DemoShoes.Consultant.Impl
                     case 2: view.Show(FindFootwearByVendorCode()); break;
                     case 3: view.Show(ChooseFootwearByGender()); break;
                     case 4: view.Show(ChooseFamilyKitForSeason()); break;
-                    case 5:
-                    case 6:
-                    case 7:
+                    case 5: view.Show(ChooseFootwearWithHeel()); break;
+                    case 6: view.Show(ChooseFootwearBySize()); break;
+                    case 7: view.Show(ChooseFootwearBySize()); break;
                     default:
+                        view.Show("Не верный выбор. Повторите пожалуйста.");
                         break;
                 }
             } while (proceed);
@@ -127,5 +129,72 @@ namespace DemoShoes.Consultant.Impl
             }
             return null;
         }
+
+        public List<Footwear> ChooseFootwearWithHeel()
+        {
+            return storage.GetFootwearsWithHeel();
+        }
+
+        public List<Footwear> ChooseFootwearBySize()
+        {
+            double minSize;
+            double maxSize;
+            EnterValues("Укажите минимальный размер обуви: ", out minSize);
+            EnterValues("Укажите максимальный размер обуви: ", out maxSize);
+            if (minSize>maxSize)
+            {
+                double temp = maxSize;
+                maxSize = minSize;
+                minSize = temp;
+            }
+            return storage.GetFootwearsBySize(minSize, maxSize);
+            
+        }
+
+        public List<Footwear> ChooseFootwearByCost()
+        {
+            EnterValues("Укажите минимальную стоимость отбора: ",  out decimal minCost);
+            EnterValues("Укажите масимальную стоимость отбора: ", out decimal maxCost);
+            if (minCost > maxCost)
+            {
+                decimal temp = maxCost;
+                maxCost = minCost;
+                minCost = temp;
+            }
+            return storage.GetFootwearsByCost(minCost, maxCost);
+        }
+        private void EnterValues(string message, out double size)
+        {
+            bool proceed = true;
+            do
+            {
+                view.Show(message);
+                if (!double.TryParse(Console.ReadLine(), out size))
+                {
+                    view.Show("Неверный ввод. Повторите. ");
+                }
+                else
+                {
+                    proceed = false;
+                }
+            } while (proceed);
+        }
+        private void EnterValues(string message, out decimal cost)
+        {
+            bool proceed = true;
+            do
+            {
+                view.Show(message);
+                if (!decimal.TryParse(Console.ReadLine(),out cost))
+                {
+                    view.Show("Неверный ввод. Повторите. ");
+                }
+                else
+                {
+                    proceed = false;
+                }
+            } while (proceed);
+        }
+
     }
 }

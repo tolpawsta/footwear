@@ -1,6 +1,4 @@
-﻿using DemoShoes.Model.Interface;
-
-namespace DemoShoes.Model.Entity
+﻿namespace DemoShoes.Model.Entity.Impl
 {
     //Тапочки
     class Slippers : Footwear, IFootSoleable

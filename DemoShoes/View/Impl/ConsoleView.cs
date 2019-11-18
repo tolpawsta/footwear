@@ -1,7 +1,8 @@
-﻿using System;
+﻿using DemoShoes.Model.Entity;
+using System;
 using System.Collections.Generic;
 
-namespace DemoShoes.View
+namespace DemoShoes.View.Impl
 {
     class ConsoleView : IViewable
     {

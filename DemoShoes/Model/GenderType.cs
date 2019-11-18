@@ -1,4 +1,4 @@
-﻿namespace DemoShoes
+﻿namespace DemoShoes.Model
 {
     enum GenderType
     {

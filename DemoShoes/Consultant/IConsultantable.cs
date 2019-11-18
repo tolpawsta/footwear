@@ -11,6 +11,9 @@ namespace DemoShoes.Consultant
         Footwear FindFootwearByVendorCode();
         List<Footwear> ChooseFootwearByGender();
         List<Footwear> ChooseFamilyKitForSeason();
+        List<Footwear> ChooseFootwearWithHeel();
+        List<Footwear> ChooseFootwearBySize();
+        List<Footwear> ChooseFootwearByCost();
 
     }
 }
