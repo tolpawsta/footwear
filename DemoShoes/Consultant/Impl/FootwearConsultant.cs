@@ -5,6 +5,7 @@ using DemoShoes.View;
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using System.Linq;
 
 namespace DemoShoes.Consultant.Impl
 {
@@ -27,6 +28,7 @@ namespace DemoShoes.Consultant.Impl
             bool proceed = true;
             do
             {
+                view.Show("=============================================");
                 view.Show($"Выберите действия:");
                 view.Show("1. Посмотрель всю обувь.");
                 view.Show("2. Найти обувь по артикулу.");
@@ -36,6 +38,7 @@ namespace DemoShoes.Consultant.Impl
                 view.Show("6. Подобрать обувь по размеру.");
                 view.Show("7. Подобрать обувь по цене.");
                 view.Show("0. Спасибо, мне ничего не надо.");
+                view.Show("=============================================");
                 int choice;
                 int.TryParse(Console.ReadLine(), out choice);
                 switch (choice)
@@ -47,7 +50,7 @@ namespace DemoShoes.Consultant.Impl
                     case 4: view.Show(ChooseFamilyKitForSeason()); break;
                     case 5: view.Show(ChooseFootwearWithHeel()); break;
                     case 6: view.Show(ChooseFootwearBySize()); break;
-                    case 7: view.Show(ChooseFootwearBySize()); break;
+                    case 7: view.Show(ChooseFootwearByCost()); break;
                     default:
                         view.Show("Не верный выбор. Повторите пожалуйста.");
                         break;
@@ -64,21 +67,21 @@ namespace DemoShoes.Consultant.Impl
             Thread.Sleep(2000);
         }
 
-        public void ShowFootwear(List<Footwear> footwears)
+        public void ShowFootwear(IEnumerable<Footwear> footwears)
         {
             bool proceed = true;
             do
             {
-                view.Show("Отсортировать результат по:\n 1. Возростанию артикула \n2. Убыванию уртикула \n0. Завершить");
+                view.Show("Отсортировать результат по:\n1. Возростанию артикула \n2. Убыванию уртикула \n0. Завершить");
                 int choice;
                 int.TryParse(Console.ReadLine(), out choice);
                 switch (choice)
                 {
                     case 0: proceed = false; break;
-                    case 1: footwears.Sort((f1, f2) => f1.VendorCode.CompareTo(f2.VendorCode)); break;
-                    case 2: footwears.Reverse(); ; break;
+                    case 1: footwears.OrderBy(f=>f.VendorCode); view.Show(footwears); break;
+                    case 2: var footwearsOrderByDesc= footwears.OrderByDescending(f=>f.VendorCode); view.Show(footwearsOrderByDesc); break;
 
-                    default: view.Show("Такой операции не существует."); break;
+                    default: view.Show("\t----Такой операции не существует.----"); break;
                 }
 
             } while (proceed);
@@ -87,6 +90,7 @@ namespace DemoShoes.Consultant.Impl
         public Footwear FindFootwearByVendorCode()
         {
             int vendorCode;
+            view.Show("Введите номер артикула: ");
             if (int.TryParse(Console.ReadLine(), out vendorCode))
             {
                 return storage.GetFootwearBy(vendorCode);
@@ -94,7 +98,7 @@ namespace DemoShoes.Consultant.Impl
             return null;
         }
 
-        public List<Footwear> ChooseFootwearByGender()
+        public IEnumerable<Footwear> ChooseFootwearByGender()
         {
             view.Show("Укажите пол:\n 1. Мужской \n2. Женский \n3. Обувь для детей");
             int choice;
@@ -105,13 +109,13 @@ namespace DemoShoes.Consultant.Impl
                     case 1: return storage.GetFootwearsBy(GenderType.Man);
                     case 2: return storage.GetFootwearsBy(GenderType.Woman);
                     case 3: return storage.GetFootwearsBy(GenderType.Child);
-                    default: view.Show("Такой операции не существует."); break;
+                    default: view.Show("Не верный выбор."); break;
                 }
             }
             return null;
         }
 
-        public List<Footwear> ChooseFamilyKitForSeason()
+        public IEnumerable<Footwear> ChooseFamilyKitForSeason()
         {
             view.Show("Выберите сезон:\n 1. Весна \n2. Лето \n3. Осень \n4. Зима");
             int choice;
@@ -130,46 +134,47 @@ namespace DemoShoes.Consultant.Impl
             return null;
         }
 
-        public List<Footwear> ChooseFootwearWithHeel()
+        public IEnumerable<Footwear> ChooseFootwearWithHeel()
         {
             return storage.GetFootwearsWithHeel();
         }
 
-        public List<Footwear> ChooseFootwearBySize()
+        public IEnumerable<Footwear> ChooseFootwearBySize()
         {
-            double minSize;
-            double maxSize;
-            EnterValues("Укажите минимальный размер обуви: ", out minSize);
-            EnterValues("Укажите максимальный размер обуви: ", out maxSize);
-            if (minSize>maxSize)
+            int minSize = (int)EnterValues("Укажите минимальный размер обуви: ");
+            int maxSize = (int)EnterValues("Укажите максимальный размер обуви: ");
+
+
+            if (minSize > maxSize)
             {
-                double temp = maxSize;
+                int temp = maxSize;
                 maxSize = minSize;
                 minSize = temp;
             }
             return storage.GetFootwearsBySize(minSize, maxSize);
-            
+
         }
 
-        public List<Footwear> ChooseFootwearByCost()
+        public IEnumerable<Footwear> ChooseFootwearByCost()
         {
-            EnterValues("Укажите минимальную стоимость отбора: ",  out decimal minCost);
-            EnterValues("Укажите масимальную стоимость отбора: ", out decimal maxCost);
+            double minCost = EnterValues("Укажите минимальную стоимость отбора: ");
+            double maxCost = EnterValues("Укажите масимальную стоимость отбора: ");
             if (minCost > maxCost)
             {
-                decimal temp = maxCost;
+                double temp = maxCost;
                 maxCost = minCost;
                 minCost = temp;
             }
             return storage.GetFootwearsByCost(minCost, maxCost);
         }
-        private void EnterValues(string message, out double size)
+        private double EnterValues(string message)
         {
+            double tempValue = 0;
             bool proceed = true;
             do
             {
                 view.Show(message);
-                if (!double.TryParse(Console.ReadLine(), out size))
+                if (!double.TryParse(Console.ReadLine(), out tempValue))
                 {
                     view.Show("Неверный ввод. Повторите. ");
                 }
@@ -178,23 +183,9 @@ namespace DemoShoes.Consultant.Impl
                     proceed = false;
                 }
             } while (proceed);
+            return tempValue;
         }
-        private void EnterValues(string message, out decimal cost)
-        {
-            bool proceed = true;
-            do
-            {
-                view.Show(message);
-                if (!decimal.TryParse(Console.ReadLine(),out cost))
-                {
-                    view.Show("Неверный ввод. Повторите. ");
-                }
-                else
-                {
-                    proceed = false;
-                }
-            } while (proceed);
-        }
+
 
     }
 }

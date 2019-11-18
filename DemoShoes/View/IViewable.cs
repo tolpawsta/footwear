@@ -8,5 +8,6 @@ namespace DemoShoes.View
         void Show(string message);
         void Show(Footwear footwear);
         void Show(List<Footwear> footwears);
+        void Show(IEnumerable<Footwear> footwears);
     }
 }

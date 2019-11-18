@@ -6,12 +6,12 @@ namespace DemoShoes.Storage
 {
     interface IStorage
     {
-        List<Footwear> GetAllShoes();
+        IEnumerable<Footwear> GetAllShoes();
         Footwear GetFootwearBy(int vendorCode);
-        List<Footwear> GetFootwearsBy(GenderType gender);
-        List<Footwear> GetFootwearsFamilyKit(SeasonType seasonType);
-        List<Footwear> GetFootwearsWithHeel();
-        List<Footwear> GetFootwearsBySize(double minSize, double maxSize);
-        List<Footwear> GetFootwearsByCost(decimal minCost, decimal maxCost);
+        IEnumerable<Footwear> GetFootwearsBy(GenderType gender);
+        IEnumerable<Footwear> GetFootwearsFamilyKit(SeasonType seasonType);
+        IEnumerable<Footwear> GetFootwearsWithHeel();
+        IEnumerable<Footwear> GetFootwearsBySize(int minSize, int maxSize);
+        IEnumerable<Footwear> GetFootwearsByCost(double minCost, double maxCost);
     }
 }

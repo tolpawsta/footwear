@@ -7,8 +7,8 @@
         public override string ToString()
         {
             return base.ToString() +
-                " height " + Height +
-                "heel " + IsHeel;
+                "\n\theight\t" + Height +
+                "\n\theel\t" + IsHeel;
         }
 
     }

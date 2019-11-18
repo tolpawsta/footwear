@@ -3,6 +3,6 @@
     //Шнуровка
     interface ILaceable
     { // Наличие шнуровки
-        bool isLace { get; set; }
+        bool IsLace { get; set; }
     }
 }

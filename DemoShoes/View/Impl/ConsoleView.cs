@@ -1,6 +1,7 @@
 ﻿using DemoShoes.Model.Entity;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DemoShoes.View.Impl
 {
@@ -12,10 +13,10 @@ namespace DemoShoes.View.Impl
             {
                 Console.WriteLine(footwear.ToString());
             }
-            catch (NullReferenceException ex)
+            catch (NullReferenceException)
             {
 
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Извините, такой обуви нету");
             }
         }
 
@@ -31,6 +32,26 @@ namespace DemoShoes.View.Impl
         public void Show(string message)
         {
             Console.WriteLine(message);
+        }
+
+        public void Show(IEnumerable<Footwear> footwears)
+        {
+            try
+            {
+                if (footwears==null)
+                {
+                    throw new NullReferenceException("Извините, такой обуви нету");
+                }
+                Console.WriteLine(string.Join(Environment.NewLine, footwears.Select(f => f.ToString())));
+            }
+            catch (NullReferenceException nrExeption)
+            {
+
+                Console.WriteLine(nrExeption.Message);
+            }
+               
+           
+            
         }
     }
 }

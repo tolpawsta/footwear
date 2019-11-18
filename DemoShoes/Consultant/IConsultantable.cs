@@ -7,13 +7,13 @@ namespace DemoShoes.Consultant
     {
         void Work();
         void FinishWork();
-        void ShowFootwear(List<Footwear> footwears);
+        void ShowFootwear(IEnumerable<Footwear> footwears);
         Footwear FindFootwearByVendorCode();
-        List<Footwear> ChooseFootwearByGender();
-        List<Footwear> ChooseFamilyKitForSeason();
-        List<Footwear> ChooseFootwearWithHeel();
-        List<Footwear> ChooseFootwearBySize();
-        List<Footwear> ChooseFootwearByCost();
+        IEnumerable<Footwear> ChooseFootwearByGender();
+        IEnumerable<Footwear> ChooseFamilyKitForSeason();
+        IEnumerable<Footwear> ChooseFootwearWithHeel();
+        IEnumerable<Footwear> ChooseFootwearBySize();
+        IEnumerable<Footwear> ChooseFootwearByCost();
 
     }
 }

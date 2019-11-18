@@ -23,7 +23,7 @@ namespace DemoShoes.Storage.Impl
             this.footwears = factory.CreateFootwearKit();
         }
 
-        public List<Footwear> GetAllShoes()
+        public IEnumerable<Footwear> GetAllShoes()
         {
             return footwears;
         }
@@ -36,34 +36,40 @@ namespace DemoShoes.Storage.Impl
 
         }
 
-        public List<Footwear> GetFootwearsBy(GenderType gender)
+        public IEnumerable<Footwear> GetFootwearsBy(GenderType gender)
         {
-            return footwears.FindAll(f => f.Gender == gender).ToList();
+            return footwears.FindAll(f => f.Gender == gender);
         }
 
-        public List<Footwear> GetFootwearsFamilyKit(SeasonType seasonType)
+        public IEnumerable<Footwear> GetFootwearsFamilyKit(SeasonType seasonType)
         {
             List<Footwear> tempList = new List<Footwear>();
             foreach (GenderType gender in Enum.GetValues(typeof(GenderType)))
             {
-                tempList.Add(footwears.Find(f => f.Gender == gender && f.Season==seasonType));
+                var footwear = footwears.Find(f => f.Gender == gender && f.Season == seasonType);
+                if (footwear != null)
+                {
+                    tempList.Add(footwear);
+                }
+
             }
             return tempList;
+            // return ((IEnumerable<GenderType>)Enum.GetValues(typeof(GenderType))).Join(footwears)
         }
 
-        public List<Footwear> GetFootwearsWithHeel()
+        public IEnumerable<Footwear> GetFootwearsWithHeel()
         {
             return footwears.FindAll(f => f is IHeelable && ((IHeelable)f).IsHeel == true);
         }
 
-        public List<Footwear> GetFootwearsBySize(double minSize, double maxSize)
+        public IEnumerable<Footwear> GetFootwearsBySize(int minSize, int maxSize)
         {
-           return footwears.FindAll(f => f.Size >= minSize && f.Size <= maxSize);
+            return footwears.FindAll(f => f.Size >= minSize && f.Size <= maxSize);
         }
 
-        public List<Footwear> GetFootwearsByCost(decimal minCost, decimal maxCost)
+        public IEnumerable<Footwear> GetFootwearsByCost(double minCost, double maxCost)
         {
-            return footwears.FindAll(f => f.Size >= minCost && f.Size <= maxCost);
+            return footwears.FindAll(f => f.Cost >= minCost && f.Cost <= maxCost);
         }
     }
 }
