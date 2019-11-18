@@ -46,7 +46,7 @@ namespace DemoShoes.Storage
             List<Footwear> tempList = new List<Footwear>();
             foreach (GenderType gender in Enum.GetValues(typeof(GenderType)))
             {
-                tempList.Add(footwears.Find(f => f.Gender == gender));
+                tempList.Add(footwears.Find(f => f.Gender == gender && f.Season==seasonType));
             }
             return tempList;
         }

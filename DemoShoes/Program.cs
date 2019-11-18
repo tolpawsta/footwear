@@ -1,4 +1,5 @@
 ﻿using DemoShoes.Consultant;
+using DemoShoes.Consultant.Impl;
 using DemoShoes.Factory;
 using DemoShoes.Storage;
 using DemoShoes.View;

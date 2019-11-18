@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Consultant\ConsultantBase.cs" />
-    <Compile Include="Consultant\FootwearConsultant.cs" />
+    <Compile Include="Consultant\Impl\FootwearConsultant.cs" />
     <Compile Include="Consultant\IConsultantable.cs" />
     <Compile Include="Factory\IFactoryable.cs" />
     <Compile Include="Factory\FootwearFactory.cs" />

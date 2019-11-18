@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 
-namespace DemoShoes.Consultant
+namespace DemoShoes.Consultant.Impl
 {
     class FootwearConsultant : ConsultantBase, IConsultantable
     {
